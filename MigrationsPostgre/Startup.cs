@@ -1,14 +1,13 @@
+using System;
+
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
-using MigrationsPostgre.Model;
+
+using MigrationsPostgre.Models;
 
 namespace MigrationsPostgre
 {
@@ -28,8 +27,9 @@ namespace MigrationsPostgre
             // Add framework services.
             services.AddMvc();
 
-            services.AddEntityFrameworkNpgsql()
-            .AddDbContext<FuncionarioContext>(options => options.UseNpgsql(Configuration.GetConnectionString("FuncionariosDB")));
+            services
+                //.AddEntityFrameworkNpgsql()
+                .AddDbContext<FuncionarioContext>(options => options.UseNpgsql(Configuration.GetConnectionString("FuncionariosDB"), options => options.SetPostgresVersion(new Version(9, 6))));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

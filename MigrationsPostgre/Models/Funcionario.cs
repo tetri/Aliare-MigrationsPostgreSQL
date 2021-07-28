@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace MigrationsPostgre.Model
+namespace MigrationsPostgre.Models
 {
     [Table("funcionarios")]
     public class Funcionario

@@ -1,0 +1,4 @@
+﻿.vs/
+.vscode/
+MigrationsPostgre/obj/
+MigrationsPostgre/bin/
