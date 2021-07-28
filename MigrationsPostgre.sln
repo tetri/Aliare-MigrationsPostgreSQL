@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31424.327
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MigrationsPostgre", "MigrationsPostgre\MigrationsPostgre.csproj", "{C564780D-4835-42C3-86DE-328784B178DF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C564780D-4835-42C3-86DE-328784B178DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C564780D-4835-42C3-86DE-328784B178DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C564780D-4835-42C3-86DE-328784B178DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C564780D-4835-42C3-86DE-328784B178DF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3CA49252-9023-42FF-915C-079458726B37}
+	EndGlobalSection
+EndGlobal
