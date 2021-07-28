@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace MigrationsPostgre.Model
+namespace MigrationsPostgre.Models
 {
     public class FuncionarioContext : DbContext
     {
