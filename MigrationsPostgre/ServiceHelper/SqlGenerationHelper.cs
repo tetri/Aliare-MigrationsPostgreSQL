@@ -1,11 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore.Storage;
-using Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics.CodeAnalysis;
-using System.Linq;
+﻿using System.Diagnostics.CodeAnalysis;
 using System.Text;
-using System.Threading.Tasks;
+
+using Microsoft.EntityFrameworkCore.Storage;
 
 namespace MigrationsPostgre.ServiceHelper
 {

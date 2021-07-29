@@ -10,8 +10,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace MigrationsPostgre.Migrations
 {
     [DbContext(typeof(FuncionarioContext))]
-    [Migration("20210728195208_TamanhoFuncaoFuncionario")]
-    partial class TamanhoFuncaoFuncionario
+    [Migration("20210729201449_Inicial")]
+    partial class Inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
