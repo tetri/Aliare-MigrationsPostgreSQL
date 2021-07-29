@@ -24,6 +24,8 @@ namespace MigrationsPostgre
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddApplicationInsightsTelemetry();
+
             // Add framework services.
             services.AddMvc();
 
@@ -53,7 +55,7 @@ namespace MigrationsPostgre
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Home}/{action=Index}/{Id?}");
             });
         }
     }

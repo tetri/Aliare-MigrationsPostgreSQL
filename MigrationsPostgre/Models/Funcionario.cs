@@ -7,9 +7,13 @@ namespace MigrationsPostgre.Models
     public class Funcionario
     {
         [Key]
-        public int id { get; set; }
-        public string nome { get; set; }
-        public int idade { get; set; }
-        public string funcao { get; set; }
+        [Column(TypeName = "citext")]
+        public int Id { get; set; }
+        [Column(TypeName = "citext")]
+        public string Nome { get; set; }
+        [Column(TypeName = "citext")]
+        public int Idade { get; set; }
+        [Column(TypeName = "citext")]
+        public string Funcao { get; set; }
     }
 }

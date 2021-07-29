@@ -32,7 +32,7 @@ namespace MigrationsPostgre.Controllers
             }
 
             var funcionario = await _context.Funcionarios
-                .FirstOrDefaultAsync(m => m.id == id);
+                .FirstOrDefaultAsync(m => m.Id == id);
             if (funcionario == null)
             {
                 return NotFound();
@@ -52,7 +52,7 @@ namespace MigrationsPostgre.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("id,nome,idade,funcao")] Funcionario funcionario)
+        public async Task<IActionResult> Create([Bind("Id,Nome,Idade,Funcao")] Funcionario funcionario)
         {
             if (ModelState.IsValid)
             {
@@ -84,9 +84,9 @@ namespace MigrationsPostgre.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("id,nome,idade,funcao")] Funcionario funcionario)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,Idade,Funcao")] Funcionario funcionario)
         {
-            if (id != funcionario.id)
+            if (id != funcionario.Id)
             {
                 return NotFound();
             }
@@ -100,7 +100,7 @@ namespace MigrationsPostgre.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!FuncionarioExists(funcionario.id))
+                    if (!FuncionarioExists(funcionario.Id))
                     {
                         return NotFound();
                     }
@@ -123,7 +123,7 @@ namespace MigrationsPostgre.Controllers
             }
 
             var funcionario = await _context.Funcionarios
-                .FirstOrDefaultAsync(m => m.id == id);
+                .FirstOrDefaultAsync(m => m.Id == id);
             if (funcionario == null)
             {
                 return NotFound();
@@ -145,7 +145,7 @@ namespace MigrationsPostgre.Controllers
 
         private bool FuncionarioExists(int id)
         {
-            return _context.Funcionarios.Any(e => e.id == id);
+            return _context.Funcionarios.Any(e => e.Id == id);
         }
     }
 }
