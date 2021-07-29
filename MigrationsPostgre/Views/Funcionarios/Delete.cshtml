@@ -1,4 +1,4 @@
-@model MigrationsPostgre.Models.Funcionario
+﻿@model MigrationsPostgre.Models.Funcionario
 
 @{
     ViewData["Title"] = "Delete";
@@ -28,6 +28,12 @@
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.Funcao)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DataHoraCadastro)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DataHoraCadastro)
         </dd>
     </dl>
     

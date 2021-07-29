@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MigrationsPostgre.Models
@@ -7,13 +8,13 @@ namespace MigrationsPostgre.Models
     public class Funcionario
     {
         [Key]
-        [Column(TypeName = "citext")]
         public int Id { get; set; }
-        [Column(TypeName = "citext")]
         public string Nome { get; set; }
-        [Column(TypeName = "citext")]
         public int Idade { get; set; }
-        [Column(TypeName = "citext")]
+        
+        [StringLength(200)]
         public string Funcao { get; set; }
+
+        public DateTime DataHoraCadastro { get; set; }
     }
 }
