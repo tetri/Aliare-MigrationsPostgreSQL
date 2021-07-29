@@ -857,10 +857,10 @@ function Sizzle( selector, context, results, seed ) {
 					if ( newContext !== context || !support.scope ) {
 
 						// Capture the context ID, setting it first if necessary
-						if ( ( nid = context.getAttribute( "id" ) ) ) {
+						if ( ( nid = context.getAttribute( "Id" ) ) ) {
 							nid = nid.replace( rcssescape, fcssescape );
 						} else {
-							context.setAttribute( "id", ( nid = expando ) );
+							context.setAttribute( "Id", ( nid = expando ) );
 						}
 					}
 
@@ -883,7 +883,7 @@ function Sizzle( selector, context, results, seed ) {
 					nonnativeSelectorCache( selector, true );
 				} finally {
 					if ( nid === expando ) {
-						context.removeAttribute( "id" );
+						context.removeAttribute( "Id" );
 					}
 				}
 			}
@@ -1207,7 +1207,7 @@ setDocument = Sizzle.setDocument = function( node ) {
 		Expr.filter[ "ID" ] = function( id ) {
 			var attrId = id.replace( runescape, funescape );
 			return function( elem ) {
-				return elem.getAttribute( "id" ) === attrId;
+				return elem.getAttribute( "Id" ) === attrId;
 			};
 		};
 		Expr.find[ "ID" ] = function( id, context ) {
@@ -1221,7 +1221,7 @@ setDocument = Sizzle.setDocument = function( node ) {
 			var attrId = id.replace( runescape, funescape );
 			return function( elem ) {
 				var node = typeof elem.getAttributeNode !== "undefined" &&
-					elem.getAttributeNode( "id" );
+					elem.getAttributeNode( "Id" );
 				return node && node.value === attrId;
 			};
 		};
@@ -1236,7 +1236,7 @@ setDocument = Sizzle.setDocument = function( node ) {
 				if ( elem ) {
 
 					// Verify the id attribute
-					node = elem.getAttributeNode( "id" );
+					node = elem.getAttributeNode( "Id" );
 					if ( node && node.value === id ) {
 						return [ elem ];
 					}
@@ -1245,7 +1245,7 @@ setDocument = Sizzle.setDocument = function( node ) {
 					elems = context.getElementsByName( id );
 					i = 0;
 					while ( ( elem = elems[ i++ ] ) ) {
-						node = elem.getAttributeNode( "id" );
+						node = elem.getAttributeNode( "Id" );
 						if ( node && node.value === id ) {
 							return [ elem ];
 						}

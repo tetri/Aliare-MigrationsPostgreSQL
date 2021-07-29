@@ -1,0 +1,19 @@
+version: '3.4'
+
+services:
+  migrationspostgre:
+    image: ${DOCKER_REGISTRY-}migrationspostgre
+    build:
+      context: .
+      dockerfile: MigrationsPostgre/Dockerfile
+    depends_on:
+    - "postgres96"
+
+
+  postgres96:
+    image: postgres:9.6
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: tetri
+    ports:
+    - "5432:5432"
